@@ -112,6 +112,7 @@
 </template>
 
 <script>
+
 import ExpanderVideo from "./components/ExpanderVideo.vue";
 // import ExpanderScroller from "./components/ExpanderScroller.vue";
 // import ExpanderSlider from "./components/ExpanderSlider.vue";
@@ -139,6 +140,30 @@ export default {
     track(label, category) {
       category = category || "Click";
       window.customTrack(category, "interaction", label);
+=======
+  import ExpanderVideo from './components/ExpanderVideo.vue'
+  import ExpanderScroller from './components/ExpanderScroller.vue'
+  import ExpanderSlider from './components/ExpanderSlider.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      ExpanderVideo,
+      ExpanderScroller,
+      ExpanderSlider,
+    },
+    data() {
+      return {
+        mobile: false,
+        videoFile: '1080.mp4'
+      }
+    },
+    created() {
+      // if (window.innerWidth < 480) {
+      //   this.mobile = true
+      //   this.videoFile = '480.mp4'
+      // }
+
     },
   },
 };
